@@ -356,6 +356,6 @@ For support, email mehuldadlani13@gmail.com
 <div align="center">
   <p>Made with ❤️ by the VisionScan Pro Team</p>
   <p>
-    <a href="https://github.com/mehuldadlani/visionscanpro">GitHub</a>
+    <a href="https://github.com/mehuldadlani/VisionScan-Pro">GitHub</a>
   </p>
 </div>
