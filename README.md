@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# VisionScan Pro
-
 <div align="center">
   <img src="assets/images/app_icon.png" alt="VisionScan Pro Logo" width="120" height="120">
   
@@ -301,13 +298,11 @@ Future<File> exportAsPdf(ScanResult scan) async {
 - [ ] **Background Processing**: OCR processing in background threads
 - [ ] **Memory Management**: Improved memory usage for large image sets
 
-## 📱 Demo Videos
+## 📱 Demo GIFs
 
 ### iOS Demo
-<video width="100%" controls>
-  <source src="assets/recordings/ios.MP4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+
+![iOS Demo](assets/recordings/ios.gif)
 
 **iOS Demo Features:**
 - Camera interface with scanning rectangle
@@ -318,10 +313,10 @@ Future<File> exportAsPdf(ScanResult scan) async {
 - Neumorphic UI design
 
 ### Android Demo
-<video width="100%" controls>
-  <source src="assets/recordings/android.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+
+![Android Demo](assets/recordings/android.gif)
+
+
 
 **Android Demo Features:**
 - Cross-platform consistency
@@ -364,6 +359,3 @@ For support, email mehuldadlani13@gmail.com
     <a href="https://github.com/mehuldadlani/visionscanpro">GitHub</a>
   </p>
 </div>
-=======
-# VisionScan-Pro
->>>>>>> 45734e0aac97009cdb1bfdae0d4cbe4e91a09708
