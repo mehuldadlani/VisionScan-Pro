@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # VisionScan Pro
 
 <div align="center">
@@ -363,3 +364,6 @@ For support, email mehuldadlani13@gmail.com
     <a href="https://github.com/mehuldadlani/visionscanpro">GitHub</a>
   </p>
 </div>
+=======
+# VisionScan-Pro
+>>>>>>> 45734e0aac97009cdb1bfdae0d4cbe4e91a09708
