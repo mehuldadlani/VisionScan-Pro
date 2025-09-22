@@ -1,0 +1,132 @@
+name: visionscan_pro
+description: "VisionScan Pro - A professional camera-based OCR application that extracts numeric data from images with precision and efficiency."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # Core UI and Material Design
+  cupertino_icons: ^1.0.8
+  
+  # State Management
+  flutter_riverpod: ^2.6.1
+  riverpod_annotation: ^2.3.3
+  
+  # Navigation
+  go_router: ^15.0.0
+  
+  # Data Classes and Serialization
+  freezed_annotation: ^2.4.4
+  json_annotation: ^4.9.0
+  
+  # Database (ObjectBox)
+  objectbox: ^2.3.1
+  objectbox_flutter_libs: ^2.3.1
+  
+  # Camera and Image Processing
+  camera: ^0.11.2
+  google_ml_kit: ^0.20.0
+  image: ^4.5.4
+  
+  # File System and Storage
+  path_provider: ^2.1.1
+  path: ^1.9.0
+  
+  # Permissions
+  permission_handler: ^11.0.1
+  
+  # UUID Generation
+  uuid: ^4.5.0
+  
+  # Environment Configuration
+  envied: ^0.5.4+1
+  
+  # File Selection (Gallery)
+  image_picker: ^1.1.2
+  image_cropper: ^8.0.2
+  
+  # Utilities
+  intl: ^0.20.0
+  logger: ^2.4.0
+  flutter_animate: ^4.5.2
+  shimmer: ^3.0.0
+  crystal_navigation_bar: ^1.0.4
+  share_plus: ^12.0.0
+  phosphor_flutter: ^2.1.0
+  pdf: ^3.11.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  
+  # Linting and Analysis
+  very_good_analysis: ^6.0.0
+  
+  # Code Generation
+  build_runner: ^2.4.7
+  envied_generator: ^0.5.4+1
+  freezed: ^2.4.6
+  go_router_builder: ^2.7.1
+  json_serializable: ^6.7.1
+  objectbox_generator: ^2.3.1
+  riverpod_generator: ^2.3.9
+  
+  # Localization Generation
+  flutter_gen_runner: ^5.7.0
+
+dependency_overrides:
+  camera_android_camerax:
+    git:
+      url: https://github.com/flutter/packages
+      path: packages/camera/camera_android_camerax
+      ref: 5963ecdb2dbc5db0a4c3b2bfd9ddaaf542344aee
+
+flutter:
+  uses-material-design: true
+  
+  # Enable generation of localized strings from .arb files
+  generate: true
+  
+  assets:
+    - assets/images/
+    - assets/icons/
+    
+  # fonts:
+  #   - family: Inter
+  #     fonts:
+  #       - asset: assets/fonts/Inter-Regular.ttf
+  #         weight: 400
+  #       - asset: assets/fonts/Inter-Medium.ttf
+  #         weight: 500
+  #       - asset: assets/fonts/Inter-SemiBold.ttf
+  #         weight: 600
+  #       - asset: assets/fonts/Inter-Bold.ttf
+  #         weight: 700
+
+# Flutter generation configuration
+flutter_gen:
+  output: lib/config/
+  assets:
+    enabled: true
+    outputs:
+      class_name: Assets
+    
+flutter_intl:
+  enabled: true
+  class_name: S
+  main_locale: en
+  arb_dir: lib/l10n/arb
+  output_dir: lib/l10n/generated
+  use_deferred_loading: false
+
+# ObjectBox Configuration
+objectbox:
+  output_dir: core/database/objectbox

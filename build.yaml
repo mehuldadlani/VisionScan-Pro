@@ -1,0 +1,101 @@
+targets:
+  $default:
+    builders:
+      # Envied Builder configuration
+      envied_generator|envied:
+        enabled: true
+        generate_for:
+          - lib/config/environment/env.dart
+        options:
+          path: .env
+          override: true
+          build_extensions:
+            "^lib/{{dir}}/{{file}}.dart": "lib/{{dir}}/generated/{{file}}.g.dart"
+
+      # Flutter Gen Builder configuration
+      flutter_gen_runner:
+        enabled: true
+
+      # Riverpod configuration
+      riverpod_generator:
+        enabled: true
+        generate_for:
+          - lib/**/*.dart
+        options:
+          build_extensions:
+            "^lib/{{dir}}/{{file}}.dart": "lib/{{dir}}/generated/{{file}}.g.dart"
+
+      # GoRouter Builder configuration
+      go_router_builder:
+        enabled: true
+        generate_for:
+          - lib/**/*.dart
+        options:
+          build_extensions:
+            "^lib/{{dir}}/{{file}}.dart": "lib/{{dir}}/generated/{{file}}.g.dart"
+
+      # ObjectBox Generator configuration
+      objectbox_generator|resolver:
+        enabled: true
+        generate_for:
+          - lib/**/*.dart
+      objectbox_generator|generator:
+        enabled: true
+
+      # JSON Serializable configuration
+      json_serializable:
+        enabled: true
+        generate_for:
+          include:
+            - lib/**/*.dart
+          exclude:
+            - lib/**/*.gql.dart
+            - lib/**/generated/**
+        options:
+          checked: true
+          explicit_to_json: true
+          field_rename: snake
+          create_to_json: true
+          include_if_null: false
+          disallow_unrecognized_keys: true
+          create_field_map: true
+          create_per_field_to_json: true
+          generic_argument_factories: true
+          ignore_unannotated: false
+          any_map: true
+          create_factory: true
+          create_json_keys: true
+
+      # Freezed configuration
+      freezed:
+        enabled: true
+        generate_for:
+          include:
+            - lib/**/*.dart
+          exclude:
+            - lib/**/generated/**
+        options:
+          copy_with: true
+          equal: true
+          make_collections_unmodifiable: true
+          from_json: true
+          to_json: true
+          union_key: type
+          union_value_case: snake
+          map: true
+          when: true
+          toStringOverride: true
+          build_extensions:
+            "^lib/{{dir}}/{{file}}.dart": "lib/{{dir}}/generated/{{file}}.freezed.dart"
+
+      # Source Gen combining builder for general case
+      source_gen:combining_builder:
+        enabled: true
+        generate_for:
+          include:
+            - lib/**/*.dart
+          exclude:
+            - lib/**/generated/**
+        options:
+          build_extensions:
+            "^lib/{{dir}}/{{file}}.dart": "lib/{{dir}}/generated/{{file}}.g.dart"
